@@ -43,10 +43,12 @@ var config = {
 const btnAsking = document.getElementById('btnAsk');
 let question = document.getElementById('pregunta');
 let questionAsked;
+let answerYoN = document.getElementById('answer');
+let questionAnswered = document.getElementById('respuesta');
 
 btnAsking.addEventListener('click', function(event) {
   questionAsked = question.value;
-  question.innerHTML = '';
+  question.value = '';
   if (questionAsked === '' || questionAsked == 'hola') {
     alert('Vamos, esa no es una pregunta, no seas tímido');
   } else {
@@ -62,13 +64,13 @@ function askHer() {
     .then(function(data) {
       console.log(data);
 
-      let response = `<h1 class="center-align">${data.answer}</h1>`;
+      let response = `<h1 class="animated pulse circular">${data.answer}</h1>`;
       let imageAnswer = `<img class="responsive-img" src="${data.image}"></img>`;
 
 
-      document.getElementById('answer').innerHTML = response;
+      questionAnswered.innerHTML = questionAsked;
+      answerYoN.innerHTML = response;
       document.getElementById('image').innerHTML = imageAnswer;
-
   })
   .catch(function(error) {
     console.log(error);
