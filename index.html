@@ -5,24 +5,29 @@
   <title>Caracoling</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 </head>
-<body class="container">
-  <header>
-    <h4>¿Tienes alguna pregunta que no te deja dormir? Te damos la respuesta</h4>
-  </header>
+<body>
+  <button type="button" id="buttonGoogle">ingresa con google</button>
   <section>
-    <div class="row">
-    <form class="col s12" id="formul">
+    <div class="container">
       <div class="row">
-        <div class="input-field col s10">
-          <input placeholder="Ingresa tu pregunta" id="pregunta" type="text" class="validate" required>
-          <label for="pregunta"></label>
-        </div>
-        <div class="input-field col s2">
-          <a class="waves-effect waves-light btn" type="submit" id="btnAsk">Preguntar</a>
+        <div class="col s12">
+          <h4>¿Tienes alguna pregunta que no te deja dormir? Te damos la respuesta</h4>
         </div>
       </div>
-    </form>
-  </div>
+      <div class="row">
+        <form class="col s12" id="formul">
+          <div class="row">
+            <div class="input-field col s10">
+              <input placeholder="Ingresa tu pregunta" id="pregunta" type="text" class="validate" required>
+              <label for="pregunta"></label>
+            </div>
+            <div class="input-field col s2">
+              <a class="waves-effect waves-light btn" type="submit" id="btnAsk">Preguntar</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
   </section>
   <section class="row">
     <div class="col s6 center-align" id="answer">
@@ -34,7 +39,9 @@
 
 
 
-<script src="https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-auth.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="assets/js/app.js"></script>
 </body>

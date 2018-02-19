@@ -10,6 +10,34 @@ var config = {
   };
   firebase.initializeApp(config);
 
+  //Autenticación
+
+  var btn = document.getElementById('buttonGoogle')
+
+  btn.addEventListener('click', function(){
+    authGoogle();
+  })
+
+  function authGoogle() {
+    var provider = new firebase.auth.GoogleAuthProvider();
+  }
+
+  function authentication(provider) {
+    firebase.auth().signInWithPopup(provider)
+    .then(function(result) {
+    var token = result.credential.accessToken;
+    var user = result.user;
+    })
+    .catch(function(error) {
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      var email = error.email;
+      // The firebase.auth.AuthCredential type that was used.
+      var credential = error.credential;
+      // ...
+    });
+  }
+
 //
 
 const btnAsking = document.getElementById('btnAsk');
