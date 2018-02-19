@@ -2,40 +2,61 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Caracoling</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
   <button type="button" id="buttonGoogle">ingresa con google</button>
-  <section>
+  <section id="encabezado">
     <div class="container">
-      <div class="row">
+      <div class="row" >
         <div class="col s12">
-          <h4>¿Tienes alguna pregunta que no te deja dormir? Te damos la respuesta</h4>
+          <h5>¿Tienes alguna pregunta que te quita el sueño? <br> Caracola te dará la respuesta</h5>
         </div>
       </div>
       <div class="row">
         <form class="col s12" id="formul">
           <div class="row">
-            <div class="input-field col s10">
-              <input placeholder="Ingresa tu pregunta" id="pregunta" type="text" class="validate" required>
+            <div class="input-field col s12 m10">
+              <input placeholder="Ingresa tu pregunta" id="pregunta" type="text" class="validate inp" required>
               <label for="pregunta"></label>
             </div>
-            <div class="input-field col s2">
-              <a class="waves-effect waves-light btn" type="submit" id="btnAsk">Preguntar</a>
+            <div class="input-field col s12 m2">
+              <a class="waves-effect waves-light btn yellow darken-1" type="submit" id="btnAsk">Preguntar</a>
             </div>
           </div>
         </form>
       </div>
     </div>
   </section>
-  <section class="row">
-    <div class="col s6 center-align" id="answer">
-      
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col s6 center-align">
+          <p id="respuesta">
+            
+          </p>
+          <div id="answer" class="center-align">
+            
+          </div>
+        </div>
+        <div class="col s6" id="image">
+         
+        </div>
+      </div>
     </div>
-    <div class="col s6" id="image">
-      
+  </section>
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col s12 center-align yellow darken-1" id="info">
+          <p>La Caracola Mágica lo sabe todo. Puedes preguntarle lo que quieras, siempre que sean preguntas cerradas (sí o no) y te llevarás una sorpresa.</p>
+        </div>
+      </div>
     </div>
+  </section>
 
 
 

@@ -1,0 +1,66 @@
+@font-face {
+    font-family: SpongeboyMeBob;
+    src: url(../font/Spongeboy-Me-Bob.ttf);
+}
+
+body {
+  background-image: url(../img/ws_Jelly_fish_fields_1600x1200.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh
+}
+
+#encabezado {
+  background-color: #34ABBF;
+  color: #FFF;
+  width: 80%;
+  text-align: center;
+  margin: 2% 10%;
+  border-radius: 1em;
+}
+
+#btnAsk {
+  font-family: 'SpongeboyMeBob', monospace;
+}
+
+#pregunta {
+  border-bottom: #fff solid 2px;
+}
+
+
+.animated {
+  animation-duration: 2.5s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+
+@keyframes pulse {
+  0% {transform: scale(1);}
+  50% {transform: scale(1.1);}
+  100% {transform: scale(1);}
+}
+
+.pulse {
+  animation-name: pulse;
+  animation-duration: 1s;
+}
+
+.circular {
+  background-color: #CCA2D7;
+  color: #FFF;
+  border-radius: 100%;
+  width: 2em;
+  height: 2em;
+  padding: 0.3em;
+  margin: auto;
+}
+
+#respuesta {
+  font-size: 1.2em;
+  font-style: italic;
+}
+
+#info {
+  color: #FFF;
+  border-radius: 1em;
+}
