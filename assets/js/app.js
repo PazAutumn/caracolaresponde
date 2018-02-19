@@ -1,3 +1,17 @@
+//Firebase
+
+var config = {
+    apiKey: "AIzaSyDlPuGTt0qq3ZiB1XB1e8h5_5RSSgYcwUg",
+    authDomain: "caracola-6091f.firebaseapp.com",
+    databaseURL: "https://caracola-6091f.firebaseio.com",
+    projectId: "caracola-6091f",
+    storageBucket: "caracola-6091f.appspot.com",
+    messagingSenderId: "995615335235"
+  };
+  firebase.initializeApp(config);
+
+//
+
 const btnAsking = document.getElementById('btnAsk');
 
 btnAsking.addEventListener('click', function(event) {
