@@ -13,9 +13,17 @@ var config = {
 //
 
 const btnAsking = document.getElementById('btnAsk');
+let question = document.getElementById('pregunta');
+let questionAsked;
 
 btnAsking.addEventListener('click', function(event) {
-  askHer();
+  questionAsked = question.value;
+  question.innerHTML = '';
+  if (questionAsked === '' || questionAsked == 'hola') {
+    alert('Vamos, esa no es una pregunta, no seas tímido');
+  } else {
+    askHer();
+  }
 });
 
 function askHer() {
@@ -34,4 +42,7 @@ function askHer() {
       document.getElementById('image').innerHTML = imageAnswer;
 
   })
+  .catch(function(error) {
+    console.log(error);
+  });
 }
