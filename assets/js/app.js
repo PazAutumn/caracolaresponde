@@ -41,6 +41,15 @@ var config = {
     });
   }
 
+  //DATABASE
+
+  var database = firebase.database();
+
+  //STORAGE
+
+  var storage = firebase.storage();
+
+
 //
 
 const btnAsking = document.getElementById('btnAsk');
