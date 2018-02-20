@@ -26,7 +26,7 @@ var config = {
     .then(function(result) {
     var token = result.credential.accessToken;
     var user = result.user;
-    consolle.log(result);
+    console.log(result);
     })
     .catch(function(error) {
       console.log(error);
