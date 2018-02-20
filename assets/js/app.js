@@ -12,14 +12,13 @@ var config = {
 
   //Autenticación
 
-  var btn = document.getElementById('buttonGoogle')
-
-  btn.addEventListener('click', function(){
+  $('#buttonGoogle').click(function(){
     authGoogle();
   })
 
   function authGoogle() {
     var provider = new firebase.auth.GoogleAuthProvider();
+    authentication(provider);
   }
 
   function authentication(provider) {
@@ -27,14 +26,18 @@ var config = {
     .then(function(result) {
     var token = result.credential.accessToken;
     var user = result.user;
+    consolle.log(result);
     })
     .catch(function(error) {
+      console.log(error);
       var errorCode = error.code;
+      console.log(errorCode);
       var errorMessage = error.message;
+      console.log(errorMessage);
       var email = error.email;
-      // The firebase.auth.AuthCredential type that was used.
+      console.log(email);
       var credential = error.credential;
-      // ...
+      console.log(credential);
     });
   }
 
