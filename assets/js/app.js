@@ -39,7 +39,7 @@ var config = {
       var credential = error.credential;
       console.log(credential);
     });
-  };
+  }
 
 //
 
