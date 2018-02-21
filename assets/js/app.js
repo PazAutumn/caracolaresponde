@@ -44,7 +44,7 @@ var config = {
     .then(function(result) {
     var token = result.credential.accessToken;
     var user = result.user;
-    console.log(user);
+    console.log(result);
     //contLog.style.display = 'none';
     //contPrin.style.display = 'block';
     })
@@ -59,6 +59,20 @@ var config = {
       var credential = error.credential;
       console.log(credential);
     });
+  }
+
+  var user = firebase.auth().currentUser;
+  console.log(user);
+  var name, email, photoUrl, uid, emailVerified;
+
+  if (user != null) {
+    name = user.displayName;
+    console.log(name);
+    email = user.email;
+    photoUrl = user.photoURL;
+    emailVerified = user.emailVerified;
+    uid = user.uid;
+    principal.append(contPrin);
   }
 
 
