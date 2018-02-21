@@ -47,7 +47,7 @@ var config = {
 
   //STORAGE
 
-  var storage = firebase.storage();
+  //var storage = firebase.storage();
 
 
 //
