@@ -57,8 +57,23 @@ var config = {
       var credential = error.credential;
       console.log(credential);
     });
-    if (displayName =! "") {
-      $(principal).html(contPrin);
+
+      var user = firebase.auth().currentUser;
+      console.log(user);
+      var name, email, photoUrl, uid, emailVerified;
+
+      if (user != null) {
+        name = user.displayName;
+        console.log(name);
+        email = user.email;
+        photoUrl = user.photoURL;
+        emailVerified = user.emailVerified;
+        uid = user.uid;
+        principal.append(contPrin);
+      }
+        if (currentUser =! null) {
+          $(contLog).html('');
+          $(principal).html(contPrin);
 
       // Caracola
 
@@ -123,19 +138,7 @@ var config = {
 
 //
 
-  /*var user = firebase.auth().currentUser;
-  console.log(user);
-  var name, email, photoUrl, uid, emailVerified;
 
-  if (user != null) {
-    name = user.displayName;
-    console.log(name);
-    email = user.email;
-    photoUrl = user.photoURL;
-    emailVerified = user.emailVerified;
-    uid = user.uid;
-    principal.append(contPrin);
-  }*/
 
 
 
