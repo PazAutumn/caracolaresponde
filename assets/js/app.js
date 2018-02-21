@@ -16,8 +16,6 @@ var config = {
 
   $('#buttonGoogle').click(function(){
     authGoogle();
-    contLog.style.display = 'none';
-    contPrin.style.display = 'block';
   })
 
   function authGoogle() {
@@ -31,6 +29,8 @@ var config = {
     var token = result.credential.accessToken;
     var user = result.user;
     console.log(result);
+    contLog.style.display = 'none';
+    contPrin.style.display = 'block';
     })
     .catch(function(error) {
       console.log(error);
