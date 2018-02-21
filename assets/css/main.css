@@ -61,7 +61,36 @@ body {
   font-style: italic;
 }
 
-#info {
+.info {
   color: #000;
   border-radius: 1em;
+  padding: 10px;
+  font-size: 15px;
+}
+
+#titulo {
+  font-family: 'SpongeboyMeBob', monospace;
+  text-align: center;
+}
+
+.fa-google {
+  border: 1px solid white;
+  padding: 1px;
+  color: #34ABBF;
+  background-color: white;
+  border-radius: 100%;
+  font-size: 15px;
+}
+
+#buttonGoogle {
+  background-color: #34ABBF;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  border-radius: .5em;
+}
+
+.caracolaimg {
+  width: 18em;
+  height: auto;
 }
