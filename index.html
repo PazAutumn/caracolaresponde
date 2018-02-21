@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
   <title>Caracoling</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
   <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-
-  <section class="login">
+  <section id="login">
     <div class="container">
       <div class="row">
         <div class="col s12">
@@ -34,11 +34,21 @@
       </div>
     </div>
   </section>
-
+<div id="principal">
+  <nav>
+    <div class="nav-wrapper navCaracola">
+      <img src="assets/img/ms-icon-70x70.png" alt="">
+      <a href="#" class="brand-logo">Caracola</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="#">Preguntas guardadas</a></li>
+        <li><a href="#">Salir</a></li>
+      </ul>
+    </div>
+  </nav>
   <section>
     <div class="container">
       <div class="row">
-        <div class="col s12 center-align yellow info">
+        <div class="col s12 center-align yellow info" id="infoCar">
           <p>La Caracola Mágica lo sabe todo. Puedes preguntarle lo que quieras, siempre que sean preguntas cerradas (sí o no) y te llevarás una sorpresa.</p>
         </div>
       </div>
@@ -54,11 +64,11 @@
       <div class="row">
         <form class="col s12" id="formul">
           <div class="row">
-            <div class="input-field col s12 m10">
+            <div class="input-field col s12 m9">
               <input placeholder="Ingresa tu pregunta" id="pregunta" type="text" class="validate inp" required>
               <label for="pregunta"></label>
             </div>
-            <div class="input-field col s12 m2">
+            <div class="input-field col s12 m3">
               <a class="waves-effect waves-light btn yellow" type="submit" id="btnAsk">Preguntar</a>
             </div>
           </div>
@@ -68,8 +78,8 @@
   </section>
   <section>
     <div class="container">
-      <div class="row">
-        <div class="col s6 center-align">
+      <div class="row responsestosave" id="conResp">
+        <div class="col s12 m6 center-align">
           <p id="respuesta">
             
           </p>
@@ -77,13 +87,18 @@
             
           </div>
         </div>
-        <div class="col s6" id="image">
-         
-        </div>
-      </div>
-    </div>
-  </section>
+        <div class="col s12 m6" id="randomImage">
 
+        </div>
+        <div class="row spoke">
+          <div class="col s12 center-align" id="hasSpoken">
+            
+          </div>
+        </div>
+      </div> <!-- cierro .row .responsestosave -->
+    </div> <!-- cierro .container -->
+  </section> <!-- cierro section -->
+  </div> <!-- cierro #principal -->
 
 
   <script src="https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>
