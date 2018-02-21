@@ -59,6 +59,17 @@ var config = {
     });
   }
 
+  //DATABASE
+
+  var database = firebase.database();
+
+  //STORAGE
+
+  //var storage = firebase.storage();
+
+
+//
+
   /*var user = firebase.auth().currentUser;
   console.log(user);
   var name, email, photoUrl, uid, emailVerified;
@@ -72,15 +83,6 @@ var config = {
     uid = user.uid;
     principal.append(contPrin);
   }*/
-
-
-  //DATABASE
-
-  var database = firebase.database();
-
-  //STORAGE
-
-  //var storage = firebase.storage();
 
 
 // Caracola
