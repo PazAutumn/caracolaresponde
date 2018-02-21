@@ -1,4 +1,4 @@
-/*const contLog = document.getElementById('login');
+const contLog = document.getElementById('login');
 const principal = document.getElementById('principal');
 const contPrin = '<nav><div class="nav-wrapper navCaracola"><img src="assets/img/ms-icon-70x70.png" alt="">' +
       '<a href="#" class="brand-logo">Caracola</a><ul id="nav-mobile" class="right hide-on-med-and-down">' +
@@ -14,7 +14,7 @@ const contPrin = '<nav><div class="nav-wrapper navCaracola"><img src="assets/img
     'section><div class="container"><div class="row responsestosave" id="conResp"><div class="col s12 m6 center-align">' +
     '<p id="respuesta"></p><div id="answer" class="center-align"></div></div><div class="col s12 m6" id="randomImage">' +
     '</div><div class="row spoke"><div class="col s12 center-align" id="hasSpoken"></div></div></div> <!-- cierro .row' +
-    ' .responsestosave --></div> <!-- cierro .container --></section> <!-- cierro section -->'*/
+    ' .responsestosave --></div> <!-- cierro .container --></section> <!-- cierro section -->';
 
 //Firebase
 
@@ -57,6 +57,59 @@ var config = {
       var credential = error.credential;
       console.log(credential);
     });
+    if (displayName =! "") {
+      $(principal).html(contPrin);
+
+      // Caracola
+
+      const btnAsking = document.getElementById('btnAsk');
+      let question = document.getElementById('pregunta');
+      let questionAsked;
+      let randomImage = document.getElementById('randomImage');
+      let answerYoN = document.getElementById('answer');
+      let questionAnswered = document.getElementById('respuesta');
+      let hasSpoken = document.getElementById('hasSpoken');
+
+      btnAsking.addEventListener('click', function(event) {
+        questionAsked = question.value;
+        question.value = '';
+        if (questionAsked === '' || questionAsked == 'hola') {
+          alert('Vamos, esa no es una pregunta, no seas tímido/a');
+        } else {
+          askHer();
+        }
+      });
+
+      function askHer() {
+        fetch(`https://yesno.wtf/api`)
+        .then(function(response) {
+            return response.json();
+          })
+          .then(function(data) {
+            console.log(data);
+
+            let responseYN = `<h1 class="animated pulse circular">${data.answer}</h1>`;
+            let imageAnswer = `<img class="responsive-img" src="${data.image}"></img>`;
+            /*let btnSave = `<a class="waves-effect waves-light btn yellow" type="submit" id="btnSave" onclick=saveResponse();>Guardar respuesta</a>`;*/
+
+            questionAnswered.innerHTML = questionAsked;
+            questionAnswered.classList.add('preguntarespondida');
+            answerYoN.innerHTML = responseYN;
+            randomImage.innerHTML = imageAnswer;
+            hasSpoken.innerHTML = `<h3 class="spongebob">¡La Caracola ha hablado!</h3><img class="responsive-img conch" src="assets/img/caracolahahablado.gif" alt="">`
+
+        })
+        .catch(function(error) {
+          console.log(error);
+        });
+      }
+
+      /*function saveResponse() {
+        console.log('Hola');
+        savedAnswersCont.appendChild(contResp).removeAttribute('id');
+        btnSave.remove();
+      }*/
+    }
   }
 
   //DATABASE
@@ -85,52 +138,4 @@ var config = {
   }*/
 
 
-// Caracola
 
-const btnAsking = document.getElementById('btnAsk');
-let question = document.getElementById('pregunta');
-let questionAsked;
-let randomImage = document.getElementById('randomImage');
-let answerYoN = document.getElementById('answer');
-let questionAnswered = document.getElementById('respuesta');
-let hasSpoken = document.getElementById('hasSpoken');
-
-btnAsking.addEventListener('click', function(event) {
-  questionAsked = question.value;
-  question.value = '';
-  if (questionAsked === '' || questionAsked == 'hola') {
-    alert('Vamos, esa no es una pregunta, no seas tímido/a');
-  } else {
-    askHer();
-  }
-});
-
-function askHer() {
-  fetch(`https://yesno.wtf/api`)
-  .then(function(response) {
-      return response.json();
-    })
-    .then(function(data) {
-      console.log(data);
-
-      let responseYN = `<h1 class="animated pulse circular">${data.answer}</h1>`;
-      let imageAnswer = `<img class="responsive-img" src="${data.image}"></img>`;
-      /*let btnSave = `<a class="waves-effect waves-light btn yellow" type="submit" id="btnSave" onclick=saveResponse();>Guardar respuesta</a>`;*/
-
-      questionAnswered.innerHTML = questionAsked;
-      questionAnswered.classList.add('preguntarespondida');
-      answerYoN.innerHTML = responseYN;
-      randomImage.innerHTML = imageAnswer;
-      hasSpoken.innerHTML = `<h3 class="spongebob">¡La Caracola ha hablado!</h3><img class="responsive-img conch" src="assets/img/caracolahahablado.gif" alt="">`
-
-  })
-  .catch(function(error) {
-    console.log(error);
-  });
-}
-
-/*function saveResponse() {
-  console.log('Hola');
-  savedAnswersCont.appendChild(contResp).removeAttribute('id');
-  btnSave.remove();
-}*/
