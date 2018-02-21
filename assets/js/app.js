@@ -1,3 +1,5 @@
+const contLog = document.getElementById('login');
+const contPrin = document.getElementById('principal');
 //Firebase
 
 var config = {
@@ -14,6 +16,8 @@ var config = {
 
   $('#buttonGoogle').click(function(){
     authGoogle();
+    contLog.style.display = 'none';
+    contPrin.style.display = 'block';
   })
 
   function authGoogle() {
@@ -50,19 +54,21 @@ var config = {
   //var storage = firebase.storage();
 
 
-//
+// Caracola
 
 const btnAsking = document.getElementById('btnAsk');
 let question = document.getElementById('pregunta');
 let questionAsked;
+let randomImage = document.getElementById('randomImage');
 let answerYoN = document.getElementById('answer');
 let questionAnswered = document.getElementById('respuesta');
+let hasSpoken = document.getElementById('hasSpoken');
 
 btnAsking.addEventListener('click', function(event) {
   questionAsked = question.value;
   question.value = '';
   if (questionAsked === '' || questionAsked == 'hola') {
-    alert('Vamos, esa no es una pregunta, no seas tímido');
+    alert('Vamos, esa no es una pregunta, no seas tímido/a');
   } else {
     askHer();
   }
@@ -76,15 +82,24 @@ function askHer() {
     .then(function(data) {
       console.log(data);
 
-      let response = `<h1 class="animated pulse circular">${data.answer}</h1>`;
+      let responseYN = `<h1 class="animated pulse circular">${data.answer}</h1>`;
       let imageAnswer = `<img class="responsive-img" src="${data.image}"></img>`;
-
+      /*let btnSave = `<a class="waves-effect waves-light btn yellow" type="submit" id="btnSave" onclick=saveResponse();>Guardar respuesta</a>`;*/
 
       questionAnswered.innerHTML = questionAsked;
-      answerYoN.innerHTML = response;
-      document.getElementById('image').innerHTML = imageAnswer;
+      questionAnswered.classList.add('preguntarespondida');
+      answerYoN.innerHTML = responseYN;
+      randomImage.innerHTML = imageAnswer;
+      hasSpoken.innerHTML = `<h3 class="spongebob">¡La Caracola ha hablado!</h3><img class="responsive-img conch" src="assets/img/caracolahahablado.gif" alt="">`
+
   })
   .catch(function(error) {
     console.log(error);
   });
 }
+
+/*function saveResponse() {
+  console.log('Hola');
+  savedAnswersCont.appendChild(contResp).removeAttribute('id');
+  btnSave.remove();
+}*/

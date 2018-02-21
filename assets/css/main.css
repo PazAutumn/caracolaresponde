@@ -7,7 +7,15 @@ body {
   background-image: url(../img/ws_Jelly_fish_fields_1600x1200.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh
+  background-position: initial;
+}
+
+.navCaracola {
+  background-color: #CCA2D7;
+}
+
+.navCaracola img {
+  height: 4em;
 }
 
 #encabezado {
@@ -24,10 +32,27 @@ body {
   color: #000;
 }
 
+.spongebob {
+  font-size: 2em;
+  color: #FFF;
+  font-family: 'SpongeboyMeBob', monospace;
+}
+
+.preguntarespondida {
+  background-color: #ffeb3b;
+  color: #000;
+  font-size: 1.5em;
+  border-radius: 1em;
+  padding: 0.4em;
+}
+
 #pregunta {
   border-bottom: #fff solid 2px;
 }
 
+#infoCar {
+  margin-top: 1em;
+}
 
 .animated {
   animation-duration: 2.5s;
@@ -93,4 +118,34 @@ body {
 .caracolaimg {
   width: 18em;
   height: auto;
+}
+
+/*#principal {
+  display: none;
+}*/
+
+#conResp {
+  height: 20em;
+  /*background-color: red;*/
+}
+/*
+#savedAnswers {
+  background-color: blue;
+}
+*/
+.conch {
+  width: 20em;
+  border-radius: 4.4em;
+}
+
+#hasSpoken {
+  padding: 2em;
+}
+
+.spoke {
+  margin-bottom: 0;
+}
+
+#principal {
+  display: none;
 }
