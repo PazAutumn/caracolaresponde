@@ -1,4 +1,4 @@
-const contLog = document.getElementById('login');
+/*const contLog = document.getElementById('login');
 const principal = document.getElementById('principal');
 const contPrin = '<nav><div class="nav-wrapper navCaracola"><img src="assets/img/ms-icon-70x70.png" alt="">' +
       '<a href="#" class="brand-logo">Caracola</a><ul id="nav-mobile" class="right hide-on-med-and-down">' +
@@ -14,7 +14,7 @@ const contPrin = '<nav><div class="nav-wrapper navCaracola"><img src="assets/img
     'section><div class="container"><div class="row responsestosave" id="conResp"><div class="col s12 m6 center-align">' +
     '<p id="respuesta"></p><div id="answer" class="center-align"></div></div><div class="col s12 m6" id="randomImage">' +
     '</div><div class="row spoke"><div class="col s12 center-align" id="hasSpoken"></div></div></div> <!-- cierro .row' +
-    ' .responsestosave --></div> <!-- cierro .container --></section> <!-- cierro section -->'
+    ' .responsestosave --></div> <!-- cierro .container --></section> <!-- cierro section -->'*/
 
 //Firebase
 
@@ -45,8 +45,6 @@ var config = {
     var token = result.credential.accessToken;
     var user = result.user;
     console.log(result);
-    //contLog.style.display = 'none';
-    //contPrin.style.display = 'block';
     })
     .catch(function(error) {
       console.log(error);
@@ -61,7 +59,7 @@ var config = {
     });
   }
 
-  var user = firebase.auth().currentUser;
+  /*var user = firebase.auth().currentUser;
   console.log(user);
   var name, email, photoUrl, uid, emailVerified;
 
@@ -73,7 +71,7 @@ var config = {
     emailVerified = user.emailVerified;
     uid = user.uid;
     principal.append(contPrin);
-  }
+  }*/
 
 
   //DATABASE
