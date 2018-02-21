@@ -26,7 +26,7 @@ var config = {
     .then(function(result) {
     var token = result.credential.accessToken;
     var user = result.user;
-    consolle.log(result);
+    console.log(result);
     })
     .catch(function(error) {
       console.log(error);
@@ -40,6 +40,15 @@ var config = {
       console.log(credential);
     });
   }
+
+  //DATABASE
+
+  var database = firebase.database();
+
+  //STORAGE
+
+  var storage = firebase.storage();
+
 
 //
 
