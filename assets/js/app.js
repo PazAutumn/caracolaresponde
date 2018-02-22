@@ -70,7 +70,6 @@ var config = {
       var name, email, photoUrl, uid, emailVerified;
 
       if (user != null) {
-        console.log(result);
         name = user.displayName;
         console.log(name);
         email = user.email;
