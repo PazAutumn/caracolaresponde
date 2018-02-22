@@ -52,7 +52,9 @@ var config = {
     .then(function(result) {
     var token = result.credential.accessToken;
     var user = result.user;
-    console.log(user)
+    console.log(user);
+    var userName = user.displayName;
+    console.log(userName);
 
     if (user =! null) {
         $(login).html('');
