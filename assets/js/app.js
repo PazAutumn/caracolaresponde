@@ -16,15 +16,15 @@ const contPrin = `<nav><div class="nav-wrapper navCaracola"><img src="assets/img
       'section><div class="container"><div class="row responsestosave" id="conResp"><div class="col s12 m6 center-align">' +
       '<p id="respuesta"></p><div id="answer" class="center-align"></div></div><div class="col s12 m6" id="randomImage">' +
       '</div><div class="row spoke"><div class="col s12 center-align" id="hasSpoken"></div></div></div> <!-- cierro .row' +
-      ' .responsestosave --></div> <!-- cierro .container --></section> <!-- cierro section -->';
+      ' .responsestosave --></div> <!-- cierro .container --></section> <!-- cierro section -->`;
 const contLog = '<div class="container"><div class="row"><div class="col s12"><h1 id="titulo">¡Bienvenido ' +
       'a la caracola responde!</h1></div></div><div class="row"><div class="col s12 center-align"><img class' +
       '="responsive-img caracolaimg" src="assets/img/magic-conch-30847.jpg" alt=""></div></div><div class="row">' +
       '<div class="col s12 center-align"><button type="button" class="waves-effect waves-light btn" id="butt' +
       'onGoogle">Inicia sesión con google <i class="fab fa-google"></i></button></div></div><div class="row">' +
-      '<div class="col s12"><p class="center-align yellow info">Inicia sesión con google y comienza a resolver' +
-      'tus dudas existenciales</p></div></div></div>`;
-//Firebase
+      '<div class="col s12"><p class="center-align yellow info">Inicia sesión con google y comienza a resolver ' +
+      'tus dudas existenciales</p></div></div></div>';
+      //Firebase
 
 var config = {
     apiKey: "AIzaSyDlPuGTt0qq3ZiB1XB1e8h5_5RSSgYcwUg",
