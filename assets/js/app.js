@@ -98,6 +98,7 @@ var config = {
           btnLogout.addEventListener('click', function(event) {
             $(login).html(contLog);
             $(principal).html('');
+            authentication(provider);
           })
 
           function askHer() {
