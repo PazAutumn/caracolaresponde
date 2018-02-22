@@ -1,6 +1,7 @@
 const login = document.getElementById('login');
 const principal = document.getElementById('principal');
 const name = '';
+console.log(name);
 const contPrin = '<nav><div class="nav-wrapper navCaracola"><img src="assets/img/ms-icon-70x70.png" alt="">' +
       '<a href="#" class="brand-logo">Caracola</a><ul id="nav-mobile" class="right hide-on-med-and-down">' +
       '<li><a href="#">Bienvenid@ ' + $(name) + '</a></li><li><a id="salir" href="#">Salir</a></li></ul></div></nav><section>' +
