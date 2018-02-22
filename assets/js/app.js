@@ -43,7 +43,6 @@ var config = {
   function authGoogle() {
     var provider = new firebase.auth.GoogleAuthProvider();
     authentication(provider);
-    console.log(provider);
   }
 
   function authentication(provider) {
@@ -51,27 +50,20 @@ var config = {
     .then(function(result) {
     var token = result.credential.accessToken;
     var user = result.user;
-    console.log(result);
     })
     .catch(function(error) {
-      console.log(error);
       var errorCode = error.code;
-      console.log(errorCode);
       var errorMessage = error.message;
       console.log(errorMessage);
       var email = error.email;
-      console.log(email);
       var credential = error.credential;
-      console.log(credential);
     });
 
       var user = firebase.auth().currentUser;
-      console.log(user);
       var name, email, photoUrl, uid, emailVerified;
 
       if (user != null) {
         name = user.displayName;
-        console.log(name);
         email = user.email;
         photoUrl = user.photoURL;
         emailVerified = user.emailVerified;
@@ -84,7 +76,7 @@ var config = {
       // Caracola
 
           const btnAsking = document.getElementById('btnAsk');
-          const btnLogout = document.getElementById('Salir');
+          const btnLogout = document.getElementById('salir');
           let question = document.getElementById('pregunta');
           let questionAsked;
           let randomImage = document.getElementById('randomImage');
