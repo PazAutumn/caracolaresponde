@@ -9,7 +9,7 @@ const contPrin = '<nav><div class="nav-wrapper navCaracola"><img src="assets/img
       'ontainer"><div class="row"><div class="col s12"><h5>¿Tienes alguna pregunta que te quita el sueño? <br> Cara' +
       'cola te dará la respuesta</h5></div></div><div class="row"><form class="col s12" id="formul"><div class="row">' +
       '<div class="input-field col s12 m9"><input placeholder="Ingresa tu pregunta" id="pregunta" type="text" class="v' +
-      'alidate inp" required><label for="pregunta"></label></div><div class="input-field col s12 m3"><a href="#respuesta" class="waves-e' +
+      'alidate inp" required><label for="pregunta"></label></div><div class="input-field col s12 m3"><a href="#hasSpoken" class="waves-e' +
       'ffect waves-light btn yellow" type="submit" id="btnAsk">Preguntar</a></div></div></form></div></div></section><' +
       'section><div class="container"><div class="row responsestosave" id="conResp"><div class="col s12 m6 center-align">' +
       '<p id="respuesta"></p><div id="answer" class="center-align"></div></div><div class="col s12 m6" id="randomImage">' +
@@ -98,7 +98,9 @@ var config = {
           btnLogout.addEventListener('click', function(event) {
             $(login).html(contLog);
             $(principal).html('');
-            authentication(provider);
+            $('#buttonGoogle').click(function(){
+                authGoogle();
+              })
           })
 
           function askHer() {
