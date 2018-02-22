@@ -51,6 +51,7 @@ var config = {
     firebase.auth().signInWithPopup(provider)
     .then(function(result) {
     var token = result.credential.accessToken;
+    console.log(token);
     var user = result.user;
     console.log(user);
     var userName = user.displayName;
