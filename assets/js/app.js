@@ -2,9 +2,9 @@ const login = document.getElementById('login');
 const principal = document.getElementById('principal');
 var userName;
 console.log(name);
-const contPrin = '<nav><div class="nav-wrapper navCaracola"><img src="assets/img/ms-icon-70x70.png" alt="">' +
+const contPrin = `<nav><div class="nav-wrapper navCaracola"><img src="assets/img/ms-icon-70x70.png" alt="">' +
       '<a href="#" class="brand-logo">Caracola</a><ul id="nav-mobile" class="right hide-on-med-and-down">' +
-      '<li><a href="#">Bienvenid@ ' + $(userName) + '</a></li><li><a id="salir" href="#">Salir</a></li></ul></div></nav><section>' +
+      '<li><a href="#">Bienvenid@ ${userName}</a></li><li><a id="salir" href="#">Salir</a></li></ul></div></nav><section>' +
       '<div class="container"><div class="row"><div class="col s12 center-align yellow info" id="infoCar">' +
       '<p>La Caracola Mágica lo sabe todo. Puedes preguntarle lo que quieras, siempre que sean preguntas cerradas' +
       ' (sí o no) y te llevarás una sorpresa.</p></div></div></div></section><section id="encabezado"><div class="c' +
@@ -23,7 +23,7 @@ const contLog = '<div class="container"><div class="row"><div class="col s12"><h
       '<div class="col s12 center-align"><button type="button" class="waves-effect waves-light btn" id="butt' +
       'onGoogle">Inicia sesión con google <i class="fab fa-google"></i></button></div></div><div class="row">' +
       '<div class="col s12"><p class="center-align yellow info">Inicia sesión con google y comienza a resolver' +
-      'tus dudas existenciales</p></div></div></div>';
+      'tus dudas existenciales</p></div></div></div>`;
 //Firebase
 
 var config = {
