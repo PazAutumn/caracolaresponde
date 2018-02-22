@@ -2,7 +2,7 @@ const login = document.getElementById('login');
 const principal = document.getElementById('principal');
 const contPrin = '<nav><div class="nav-wrapper navCaracola"><img src="assets/img/ms-icon-70x70.png" alt="">' +
       '<a href="#" class="brand-logo">Caracola</a><ul id="nav-mobile" class="right hide-on-med-and-down">' +
-      '<li><a href="#">Bienvenid@ ${displayName}</a></li><li><a href="#">Salir</a></li></ul></div></nav><section>' +
+      '<li><a href="#">Preguntas guardadas</a></li><li><a id="salir" href="#">Salir</a></li></ul></div></nav><section>' +
       '<div class="container"><div class="row"><div class="col s12 center-align yellow info" id="infoCar">' +
       '<p>La Caracola Mágica lo sabe todo. Puedes preguntarle lo que quieras, siempre que sean preguntas cerradas' +
       ' (sí o no) y te llevarás una sorpresa.</p></div></div></div></section><section id="encabezado"><div class="c' +
@@ -84,12 +84,14 @@ var config = {
       // Caracola
 
           const btnAsking = document.getElementById('btnAsk');
+          const btnLogout = document.getElementById('Salir');
           let question = document.getElementById('pregunta');
           let questionAsked;
           let randomImage = document.getElementById('randomImage');
           let answerYoN = document.getElementById('answer');
           let questionAnswered = document.getElementById('respuesta');
           let hasSpoken = document.getElementById('hasSpoken');
+
 
           btnAsking.addEventListener('click', function(event) {
             questionAsked = question.value;
@@ -100,6 +102,11 @@ var config = {
               askHer();
             }
           });
+
+          btnLogout.addEventListener('click', function(event) {
+            $(login).html(contLog);
+            $(principal).html('');
+          })
 
           function askHer() {
             fetch(`https://yesno.wtf/api`)
