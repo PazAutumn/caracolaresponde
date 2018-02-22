@@ -1,6 +1,6 @@
 const login = document.getElementById('login');
 const principal = document.getElementById('principal');
-const name = '';
+var name;
 console.log(name);
 const contPrin = '<nav><div class="nav-wrapper navCaracola"><img src="assets/img/ms-icon-70x70.png" alt="">' +
       '<a href="#" class="brand-logo">Caracola</a><ul id="nav-mobile" class="right hide-on-med-and-down">' +
@@ -52,26 +52,11 @@ var config = {
     .then(function(result) {
     var token = result.credential.accessToken;
     var user = result.user;
-    })
-    .catch(function(error) {
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      console.log(errorMessage);
-      var email = error.email;
-      var credential = error.credential;
-    });
+    console.log(user);
+    var userName = user.displayName;
+    console.log(userName);
 
-      var user = firebase.auth().currentUser;
-      var name, email, photoUrl, uid, emailVerified;
-
-      if (user != null) {
-        name = user.displayName;
-        email = user.email;
-        photoUrl = user.photoURL;
-        emailVerified = user.emailVerified;
-        uid = user.uid;
-        principal.append(contPrin);
-
+    if (user =! null) {
         $(login).html('');
         $(principal).html(contPrin);
 
@@ -137,6 +122,25 @@ var config = {
         } else {
           alert('No se pudo registar el usuario, intente nuevamente');
         }
+    })
+    .catch(function(error) {
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      console.log(errorMessage);
+      var email = error.email;
+      var credential = error.credential;
+    })
+  };
+
+      var user = firebase.auth().currentUser;
+      var name, email, photoUrl, uid, emailVerified;
+
+      if (user != null) {
+        name = user.displayName;
+        email = user.email;
+        photoUrl = user.photoURL;
+        emailVerified = user.emailVerified;
+        uid = user.uid;
     }
   //DATABASE
 
