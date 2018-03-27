@@ -6,7 +6,7 @@ Caracola responde es la versión remasterizada de la ya conocida en Bob Esponja.
 
 ## Proyecto desarrollado en [Laboratoria](http://laboratoria.la)
 
-![icon](favicon-32x32.png)
+![icon](assets/img/favicon-32x32.png)
 
 ## En  [Chile](http://chile.com)
 
