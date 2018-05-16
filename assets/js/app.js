@@ -34,6 +34,7 @@ var config = {
     var userName = user.displayName;
     console.log(userName);
     var displayUserName = userName + "Hola";
+    console.log(displayUserName);
 
     const contPrin = '<nav><div class="nav-wrapper navCaracola"><img src="assets/img/ms-icon-70x70.png" alt="">' +
       '<a href="#" class="brand-logo">Caracola</a><ul id="nav-mobile" class="right hide-on-med-and-down">' +
