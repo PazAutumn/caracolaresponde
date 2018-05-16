@@ -1,29 +1,6 @@
 const login = document.getElementById('login');
 const principal = document.getElementById('principal');
 var userName;
-console.log(name);
-const contPrin = '<nav><div class="nav-wrapper navCaracola"><img src="assets/img/ms-icon-70x70.png" alt="">' +
-      '<a href="#" class="brand-logo">Caracola</a><ul id="nav-mobile" class="right hide-on-med-and-down">' +
-      '<li><a href="#">Bienvenid@ '+ userName + '</a></li><li><a id="salir" href="#">Salir</a></li></ul></div></nav><section>' +
-      '<div class="container"><div class="row"><div class="col s12 center-align yellow info" id="infoCar">' +
-      '<p>La Caracola Mágica lo sabe todo. Puedes preguntarle lo que quieras, siempre que sean preguntas cerradas' +
-      ' (sí o no) y te llevarás una sorpresa.</p></div></div></div></section><section id="encabezado"><div class="c' +
-      'ontainer"><div class="row"><div class="col s12"><h5>¿Tienes alguna pregunta que te quita el sueño? <br> Cara' +
-      'cola te dará la respuesta</h5></div></div><div class="row"><form class="col s12" id="formul"><div class="row">' +
-      '<div class="input-field col s12 m9"><input placeholder="Ingresa tu pregunta" id="pregunta" type="text" class="v' +
-      'alidate inp" required><label for="pregunta"></label></div><div class="input-field col s12 m3"><a href="#hasSpoken" class="waves-e' +
-      'ffect waves-light btn yellow" type="submit" id="btnAsk">Preguntar</a></div></div></form></div></div></section><' +
-      'section><div class="container"><div class="row responsestosave" id="conResp"><div class="col s12 m6 center-align">' +
-      '<p id="respuesta"></p><div id="answer" class="center-align"></div></div><div class="col s12 m6" id="randomImage">' +
-      '</div><div class="row spoke"><div class="col s12 center-align" id="hasSpoken"></div></div></div> <!-- cierro .row' +
-      ' .responsestosave --></div> <!-- cierro .container --></section> <!-- cierro section -->';
-const contLog = '<div class="container"><div class="row"><div class="col s12"><h1 id="titulo">¡Bienvenido ' +
-      'a la caracola responde!</h1></div></div><div class="row"><div class="col s12 center-align"><img class' +
-      '="responsive-img caracolaimg" src="assets/img/magic-conch-30847.jpg" alt=""></div></div><div class="row">' +
-      '<div class="col s12 center-align"><button type="button" class="waves-effect waves-light btn" id="butt' +
-      'onGoogle">Inicia sesión con google <i class="fab fa-google"></i></button></div></div><div class="row">' +
-      '<div class="col s12"><p class="center-align yellow info">Inicia sesión con google y comienza a resolver ' +
-      'tus dudas existenciales</p></div></div></div>';
       //Firebase
 
 var config = {
@@ -56,6 +33,29 @@ var config = {
     console.log(user);
     var userName = user.displayName;
     console.log(userName);
+
+    const contPrin = '<nav><div class="nav-wrapper navCaracola"><img src="assets/img/ms-icon-70x70.png" alt="">' +
+      '<a href="#" class="brand-logo">Caracola</a><ul id="nav-mobile" class="right hide-on-med-and-down">' +
+      '<li><a href="#">Bienvenid@ '+ userName + '</a></li><li><a id="salir" href="#">Salir</a></li></ul></div></nav><section>' +
+      '<div class="container"><div class="row"><div class="col s12 center-align yellow info" id="infoCar">' +
+      '<p>La Caracola Mágica lo sabe todo. Puedes preguntarle lo que quieras, siempre que sean preguntas cerradas' +
+      ' (sí o no) y te llevarás una sorpresa.</p></div></div></div></section><section id="encabezado"><div class="c' +
+      'ontainer"><div class="row"><div class="col s12"><h5>¿Tienes alguna pregunta que te quita el sueño? <br> Cara' +
+      'cola te dará la respuesta</h5></div></div><div class="row"><form class="col s12" id="formul"><div class="row">' +
+      '<div class="input-field col s12 m9"><input placeholder="Ingresa tu pregunta" id="pregunta" type="text" class="v' +
+      'alidate inp" required><label for="pregunta"></label></div><div class="input-field col s12 m3"><a href="#hasSpoken" class="waves-e' +
+      'ffect waves-light btn yellow" type="submit" id="btnAsk">Preguntar</a></div></div></form></div></div></section><' +
+      'section><div class="container"><div class="row responsestosave" id="conResp"><div class="col s12 m6 center-align">' +
+      '<p id="respuesta"></p><div id="answer" class="center-align"></div></div><div class="col s12 m6" id="randomImage">' +
+      '</div><div class="row spoke"><div class="col s12 center-align" id="hasSpoken"></div></div></div> <!-- cierro .row' +
+      ' .responsestosave --></div> <!-- cierro .container --></section> <!-- cierro section -->';
+const contLog = '<div class="container"><div class="row"><div class="col s12"><h1 id="titulo">¡Bienvenido ' +
+      'a la caracola responde!</h1></div></div><div class="row"><div class="col s12 center-align"><img class' +
+      '="responsive-img caracolaimg" src="assets/img/magic-conch-30847.jpg" alt=""></div></div><div class="row">' +
+      '<div class="col s12 center-align"><button type="button" class="waves-effect waves-light btn" id="butt' +
+      'onGoogle">Inicia sesión con google <i class="fab fa-google"></i></button></div></div><div class="row">' +
+      '<div class="col s12"><p class="center-align yellow info">Inicia sesión con google y comienza a resolver ' +
+      'tus dudas existenciales</p></div></div></div>';
 
     if (user =! null) {
         $(login).html('');
