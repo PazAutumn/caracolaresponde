@@ -1,5 +1,6 @@
 const login = document.getElementById('login');
 const principal = document.getElementById('principal');
+console.log(login);
       //Firebase
 
 var config = {
